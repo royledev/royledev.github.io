@@ -1,0 +1,172 @@
+:root {
+  --bg: #f5f1e8;
+  --surface: #fffdf8;
+  --ink: #2b2620;
+  --muted: #6f675b;
+  --accent: #7a5c3e;
+  --line: #e3dccd;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.85;
+  font-size: 16px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(180deg, #efe7d6 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0 32px;
+}
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.eyebrow a { color: var(--muted); }
+.site-header h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+}
+.lead {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+/* Sections */
+main { padding: 8px 0 56px; }
+section { margin-top: 36px; }
+h2 {
+  font-size: 19px;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { opacity: 0.8; }
+
+.muted { color: var(--muted); font-size: 14px; }
+.note {
+  background: #fbf3e4;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 15px;
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.contact {
+  font-size: 18px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+/* FAQ */
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 4px 18px;
+  margin-bottom: 10px;
+}
+details[open] { padding-bottom: 14px; }
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 14px 0;
+  list-style: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: "＋";
+  color: var(--accent);
+  margin-right: 10px;
+  font-weight: 700;
+}
+details[open] summary::before { content: "－"; }
+details p { margin: 0 0 6px; color: #43403a; }
+
+.links { list-style: none; padding-left: 0; }
+.links li { margin-bottom: 8px; }
+
+/* Policy / table pages */
+.policy section { margin-top: 28px; }
+.callout {
+  background: #fdeede;
+  border: 1px solid #e6cda6;
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-top: 8px;
+  font-size: 15px;
+}
+table.tokushoho {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 16px;
+}
+table.tokushoho th,
+table.tokushoho td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+table.tokushoho th {
+  width: 38%;
+  background: #f7f1e4;
+  font-weight: 600;
+  white-space: nowrap;
+}
+table.tokushoho tr:last-child th,
+table.tokushoho tr:last-child td { border-bottom: none; }
+code {
+  background: #efe7d6;
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 40px;
+}
+
+@media (max-width: 480px) {
+  .site-header h1 { font-size: 25px; }
+  table.tokushoho th { width: 42%; white-space: normal; }
+}
