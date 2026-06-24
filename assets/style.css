@@ -203,7 +203,7 @@ a { color: var(--slate-link); text-decoration: none; }
   margin-top: 72px; border-top: 1px solid var(--line-dark);
   padding: 22px 0; text-align: center;
 }
-.foot p { margin: 0; font-family: var(--mono); font-size: 12px; color: var(--on-dark-mute); letter-spacing: .04em; }
+.foot p { margin: 0 auto; max-width: none; font-family: var(--mono); font-size: 12px; color: var(--on-dark-mute); letter-spacing: .04em; }
 
 /* ============ reveal motion ============ */
 [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
