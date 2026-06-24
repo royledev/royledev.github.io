@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royle — サーバーサイドエンジニア</title>
-  <meta name="description" content="Royle のポートフォリオ。Kotlin / PHP / TypeScript を中心としたサーバーサイドエンジニア。つくったアプリを紹介しています。">
-  <link rel="stylesheet" href="./assets/style.css?v=3">
+  <meta name="description" content="Royle のポートフォリオ。Kotlin / PHP / TypeScript を中心としたサーバーサイドエンジニア。制作したアプリを紹介しています。">
+  <link rel="stylesheet" href="./assets/style.css?v=4">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🐧</text></svg>">
 
   <!-- 再利用するペンギンマスコット(SVGシンボル) -->
@@ -27,33 +27,30 @@
 <body>
   <nav class="topbar">
     <div class="wrap">
-      <span class="brand"><svg class="peng"><use href="#peng"/></svg>Royle</span>
+      <span class="brand">Royle<span class="dot">.</span></span>
       <div class="topnav">
-        <a href="#apps">アプリ</a>
-        <a href="#about">じこしょうかい</a>
-        <a href="#contact">れんらく</a>
+        <a href="#apps">Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
   <header class="hero">
-    <span class="blob b1"></span>
-    <span class="blob b2"></span>
-    <span class="blob b3"></span>
-    <span class="blob b4"></span>
-    <span class="dots"></span>
+    <span class="glow g1"></span>
+    <span class="glow g2"></span>
     <div class="wrap">
       <div class="avatar">
-        <span class="wave">✌️ こんにちは</span>
         <img src="./assets/avatar.png" alt="Royle のアイコン"
              onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
         <svg class="penguin" style="display:none"><use href="#peng"/></svg>
       </div>
+      <p class="eyebrow">Server-side Engineer</p>
       <h1>Royle</h1>
-      <div><span class="role-badge">サーバーサイドエンジニア</span></div>
+      <p class="role">サーバーサイドエンジニア</p>
       <p class="summary">
-        Kotlin / PHP / TypeScript を中心に、アプリの“裏側”をつくっています。
-        個人開発では Flutter で iOS アプリも。つくるのも、ねこも、ペンギンも好きです🐧
+        Kotlin / PHP / TypeScript を中心に、アプリケーションの基盤づくりを手がけています。
+        個人開発では Flutter による iOS アプリも。設計から運用まで、丁寧につくることを大切にしています。
       </p>
 
       <div class="stack">
@@ -62,12 +59,12 @@
         <span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span>
         <span class="chip"><span class="dot" style="background:#02569b"></span>Flutter / Dart</span>
         <span class="chip"><span class="dot" style="background:#f38020"></span>Cloudflare Workers</span>
-        <span class="chip"><span class="dot" style="background:#5aa9e6"></span>SQL / DB 設計</span>
+        <span class="chip"><span class="dot" style="background:#5b89ac"></span>SQL / DB 設計</span>
       </div>
 
       <div class="cta">
-        <a class="btn btn-primary" href="#apps">つくったアプリを見る →</a>
-        <a class="btn btn-soft" href="#contact">れんらくする</a>
+        <a class="btn btn-primary" href="#apps">制作したアプリを見る</a>
+        <a class="btn btn-soft" href="#contact">お問い合わせ</a>
       </div>
     </div>
   </header>
@@ -75,8 +72,8 @@
   <section class="section" id="apps">
     <div class="wrap">
       <div class="section-head">
-        <span class="kicker">MY APPS</span>
-        <h2><span class="emoji">📱</span>つくったアプリ</h2>
+        <span class="kicker">Works</span>
+        <h2>制作したアプリ</h2>
       </div>
       <div class="apps">
         <a class="app-card" href="./apps/specimen-box/index.html">
@@ -87,7 +84,7 @@
               <span class="chip-live">● 公開中</span>
             </div>
           </div>
-          <p>1日3回届く「しょーもない問い」に答えると、ヘンな化石がひとつ手に入る収集アプリ。</p>
+          <p>1日3回届く「ちょっと答えたくなる問い」に答えると、意味不明な化石がひとつ手に入る収集アプリ。</p>
           <div class="app-meta">
             <span class="tag">Flutter</span>
             <span class="tag">iOS</span>
@@ -99,55 +96,54 @@
     </div>
   </section>
 
-  <section class="section sky" id="about">
+  <section class="section warm" id="about">
     <div class="wrap">
       <div class="section-head">
-        <span class="kicker">ABOUT ME</span>
-        <h2><span class="emoji">🙋</span>じこしょうかい</h2>
+        <span class="kicker">About</span>
+        <h2>自己紹介</h2>
       </div>
       <div class="about-grid">
-        <div class="fact c1">
-          <h3><span class="e">💻</span>おしごと</h3>
-          <p>サーバーサイドエンジニア。API 設計やデータベース、サーバー基盤など、アプリを動かす裏側をつくっています。</p>
+        <div class="fact">
+          <h3>仕事</h3>
+          <p>サーバーサイドエンジニア。API 設計やデータベース、サーバー基盤など、アプリケーションを支える裏側を中心につくっています。</p>
         </div>
-        <div class="fact c2">
-          <h3><span class="e">🗣️</span>つかう言語</h3>
+        <div class="fact">
+          <h3>使用言語</h3>
           <ul>
             <li>Kotlin — JVM バックエンド / Android</li>
             <li>PHP — Web アプリケーション</li>
             <li>TypeScript — API / フロント / エッジ</li>
           </ul>
         </div>
-        <div class="fact c3">
-          <h3><span class="e">🛠️</span>こじんかいはつ</h3>
-          <p>Flutter / Dart で iOS アプリをつくり、Cloudflare Workers でサーバーも構築。設計から運用までひとりで回します。</p>
+        <div class="fact">
+          <h3>個人開発</h3>
+          <p>Flutter / Dart で iOS アプリを開発し、Cloudflare Workers でサーバーサイドも構築。設計から運用まで一貫して手がけます。</p>
         </div>
-        <div class="fact c4">
-          <h3><span class="e">🌱</span>だいじにしてること</h3>
-          <p>つくって終わりにせず、運用・保守まで見すえた設計を大切に。小さく確実に動くものを積み上げるのが好きです。</p>
+        <div class="fact">
+          <h3>大切にしていること</h3>
+          <p>つくって終わりにせず、運用・保守まで見すえた設計を心がけています。小さく確実に動くものを積み上げる開発が好きです。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section cream2" id="contact">
+  <section class="section" id="contact">
     <div class="wrap">
       <div class="section-head">
-        <span class="kicker">CONTACT</span>
-        <h2><span class="emoji">✉️</span>れんらく</h2>
+        <span class="kicker">Contact</span>
+        <h2>お問い合わせ</h2>
       </div>
       <div class="contact-card">
         <svg class="penguin"><use href="#peng"/></svg>
-        <p>お仕事のご相談・アプリへのお問い合わせは、こちらまでお気軽にどうぞ！</p>
-        <a class="mail btn" href="mailto:royle.dev6131@gmail.com">royle.dev6131@gmail.com</a>
+        <p>お仕事のご相談・アプリへのお問い合わせは、お気軽にご連絡ください。</p>
+        <a class="mail" href="mailto:royle.dev6131@gmail.com">royle.dev6131@gmail.com</a>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="wrap">
-      <svg class="peng"><use href="#peng"/></svg>
-      <p>© 2026 Royle — made with 🐧</p>
+      <p>© 2026 Royle</p>
     </div>
   </footer>
 </body>
