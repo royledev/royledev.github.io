@@ -3,123 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>化石箱 — Royle</title>
-  <meta name="description" content="化石箱。意味不明な化石を毎日すこしずつ掘り集める、iOS 向け収集アプリ。">
-  <style>
-    :root {
-      --bg: #f5f1e8; --surface: #fffdf8; --ink: #2b2620; --muted: #6f675b;
-      --accent: #7a5c3e; --line: #e3dccd; --radius: 16px;
-    }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0; color: var(--ink); background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
-        "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
-      line-height: 1.85; font-size: 16px; -webkit-font-smoothing: antialiased;
-    }
-    .wrap { width: 100%; max-width: 720px; margin: 0 auto; padding: 0 20px; }
-    a { color: var(--accent); text-underline-offset: 2px; }
-
-    .crumb { padding: 18px 0 0; }
-    .crumb a { font-size: 13px; color: var(--muted); }
-
-    .hero {
-      text-align: center;
-      padding: 48px 0 56px;
-    }
-    .hero .mark { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 18px 0 0; font-size: 40px; letter-spacing: 0.02em; }
-    .hero .lead { margin: 14px auto 0; color: var(--muted); max-width: 30em; }
-    .hero .btns { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; font-weight: 600; font-size: 15px;
-      padding: 12px 24px; border-radius: 12px; text-decoration: none;
-      border: 1px solid var(--line); transition: transform .18s, background .18s;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .btn-ghost { background: var(--surface); color: var(--ink); }
-
-    section { margin-top: 8px; }
-    .card {
-      background: var(--surface); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 24px; margin-top: 20px;
-    }
-    .card h2 { margin: 0 0 10px; font-size: 19px; }
-    .card p { margin: 0 0 12px; }
-    .card p:last-child { margin-bottom: 0; }
-    .muted { color: var(--muted); font-size: 14px; }
-
-    .features { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
-    .features li {
-      background: var(--surface); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 16px 20px;
-    }
-    .features b { display: block; margin-bottom: 2px; }
-
-    .note {
-      background: #fbf3e4; border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 16px 18px; font-size: 15px;
-      color: var(--muted); margin-top: 20px;
-    }
-
-    .site-footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 40px; }
-    .site-footer p { margin: 0; }
-
-    @media (max-width: 480px) { .hero h1 { font-size: 32px; } }
-  </style>
+  <title>化石箱 — 意味不明な化石を、毎日すこしずつ。</title>
+  <meta name="description" content="化石箱は、1日3回届く「ちょっと答えたくなる問い」に一行で答えると、意味不明な化石がひとつ手に入る iOS 向け収集アプリ。300種類超の変な化石を掘り集めよう。">
+  <link rel="stylesheet" href="./assets/lp.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <meta property="og:title" content="化石箱">
+  <meta property="og:description" content="意味不明な化石を、毎日すこしずつ掘り集める収集アプリ。">
+  <meta property="og:image" content="./assets/icon.png">
 </head>
 <body>
-  <div class="wrap">
-    <p class="crumb"><a href="../../index.html">← Royle のアプリ一覧へ</a></p>
-  </div>
+  <nav class="topbar">
+    <div class="wrap">
+      <a class="home" href="../../index.html">← Royle のアプリ一覧</a>
+      <a href="./support/index.html">サポート</a>
+    </div>
+  </nav>
 
   <header class="hero">
     <div class="wrap">
-      <div class="mark">🦴</div>
+      <img class="app-icon" src="./assets/icon.png" alt="化石箱 アプリアイコン">
+      <p class="eyebrow">iOS App</p>
       <h1>化石箱</h1>
-      <p class="lead">意味不明な化石を、毎日すこしずつ掘り集める。<br>iOS 向けの、ゆるやかな収集アプリ。</p>
-      <div class="btns">
-        <a class="btn btn-primary" href="./support/index.html">サポート・FAQ</a>
-        <a class="btn btn-ghost" href="./support/privacy.html">プライバシーポリシー</a>
+      <p class="tagline">意味不明な化石を、毎日すこしずつ掘り集める。</p>
+      <p class="sub">
+        便利さや達成感ではなく、「集める楽しさ」そのもののためのアプリ。
+        しょーもない問いに答えるたび、変な化石がひとつ増えていく。
+      </p>
+      <div class="cta">
+        <a class="btn btn-appstore" href="https://apps.apple.com/jp/app/%E5%8C%96%E7%9F%B3%E7%AE%B1/id6781895583" target="_blank" rel="noopener">
+          <svg class="apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          App Store で入手
+        </a>
+        <a class="btn btn-ghost" href="./support/index.html">サポート・FAQ</a>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section>
-      <div class="card">
-        <h2>このアプリについて</h2>
-        <p>
-          化石箱は、1日3回ランダムな時刻に届く「ちょっと答えたくなる問い」に一行で答えると、
-          一見意味のない化石がひとつ手に入る収集アプリです。
-        </p>
-        <p>
-          便利さや達成感ではなく、集める楽しさそのものを目的にしています。
-          手に入れた化石は時系列で並び、無料のものは時間とともにゆっくり風化して消えていきます。
-          気に入った化石は「封印」（App内課金）で永久に保存できます。
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <ul class="features">
-        <li><b>毎日3回の問い</b><span class="muted">ランダムな時刻に届く問いに、一行で答える。</span></li>
-        <li><b>意味不明な化石</b><span class="muted">答えるたびに、一見意味のない化石がひとつ手に入る。</span></li>
-        <li><b>穏やかな喪失</b><span class="muted">無料の化石はゆっくり風化して消えていく。封印で永久保存も。</span></li>
-      </ul>
-    </section>
-
-    <div class="note">
-      このページは準備中です。アプリの詳しい紹介や配信リンクは順次公開予定です。
-      ご利用中のお困りごとは <a href="./support/index.html">サポートページ</a> をご覧ください。
+  <section class="section about">
+    <div class="wrap">
+      <h2 class="section-title">このアプリについて</h2>
+      <p>
+        化石箱は、1日3回ランダムな時刻に届く「ちょっと答えたくなる問い」に一行で答えると、
+        一見意味のない化石がひとつ手に入る収集アプリです。
+      </p>
+      <p>
+        手に入れた化石は時系列で並び、無料のものは時間とともにゆっくり風化して消えていきます。
+        気に入った化石は「封印」（App内課金）で永久に保存できます。
+        穏やかな喪失も、ぜんぶ含めて楽しむための箱です。
+      </p>
     </div>
-  </main>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2 class="section-title">3つの楽しみ</h2>
+      <p class="section-lead">便利さはありません。あるのは、ちょっとした問いと、変な化石だけ。</p>
+      <div class="features">
+        <div class="feature">
+          <div class="ic" style="background:#efe2cf">📝</div>
+          <h3>答える</h3>
+          <p>毎日3つ、しょーもない問いに一行で答えるだけ。</p>
+        </div>
+        <div class="feature">
+          <div class="ic" style="background:#e7d6f6">🪨</div>
+          <h3>掘る・集める</h3>
+          <p>答えと無関係な、変な化石が手に入りコレクションに並ぶ。</p>
+        </div>
+        <div class="feature">
+          <div class="ic" style="background:#fbe7c4">🔒</div>
+          <h3>封印する</h3>
+          <p>消える前に、お気に入りを閉じ込めて永久に保存。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section-title">アプリの様子</h2>
+      <p class="section-lead">答える → 掘る → 集める → 封印。300種類超、変なやつしかいません。</p>
+    </div>
+    <div class="gallery">
+      <div class="shot"><img src="./assets/screenshots/01-answer.png" alt="答える — 毎日3つ、しょーもない問いに" loading="lazy"></div>
+      <div class="shot"><img src="./assets/screenshots/02-dig.png" alt="掘る — 答えと無関係な、変な化石" loading="lazy"></div>
+      <div class="shot"><img src="./assets/screenshots/03-collect.png" alt="集める — 意味不明を、コレクション" loading="lazy"></div>
+      <div class="shot"><img src="./assets/screenshots/04-seal.png" alt="封印 — 消える前に、閉じ込めろ" loading="lazy"></div>
+      <div class="shot"><img src="./assets/screenshots/05-variety.png" alt="300種類超 — 変なやつしかいない" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>さあ、掘りはじめよう。</h2>
+      <p>化石箱は App Store から無料でダウンロードできます。使い方や不具合のご相談はサポートへ。</p>
+      <div class="cta">
+        <a class="btn btn-appstore" href="https://apps.apple.com/jp/app/%E5%8C%96%E7%9F%B3%E7%AE%B1/id6781895583" target="_blank" rel="noopener">
+          <svg class="apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          App Store で入手
+        </a>
+        <a class="btn btn-ghost" href="./support/index.html">サポート・FAQへ</a>
+      </div>
+      <p class="mail" style="margin-top:22px;">
+        <a href="mailto:royle.dev6131@gmail.com">royle.dev6131@gmail.com</a>
+      </p>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p class="muted">化石箱 — developed by <a href="../../index.html">Royle</a></p>
+      <p class="links">
+        <a href="./support/index.html">サポート</a>
+        <a href="./support/privacy.html">プライバシーポリシー</a>
+        <a href="./support/tokushoho.html">特定商取引法に基づく表記</a>
+      </p>
+      <p>化石箱 — developed by <a href="../../index.html">Royle</a></p>
     </div>
   </footer>
 </body>

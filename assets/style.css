@@ -212,6 +212,14 @@ section.block { padding: 56px 0; border-top: 1px solid var(--line); }
   display: block;
   margin-bottom: 16px;
 }
+.app-card .app-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: block;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5);
+}
 .app-card h3 { margin: 0 0 8px; font-size: 20px; }
 .app-card p { margin: 0 0 16px; color: var(--muted); font-size: 14.5px; }
 .app-meta {

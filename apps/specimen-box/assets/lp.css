@@ -1,0 +1,200 @@
+:root {
+  /* marketing (App Store screenshots) */
+  --purple: #6c4fd6;
+  --purple-deep: #4f37b3;
+  --purple-soft: #8a72e6;
+  /* app world (icon / in-app) */
+  --cream: #fbf6ec;
+  --cream-2: #fff9ef;
+  --orange: #f0883c;
+  --coral: #dd6a4d;
+  --gold: #f3c44a;
+  --mint: #9fe0c8;
+  --ink: #41372a;
+  --muted: #7c7060;
+  --faint: #a59a86;
+  --line: #e7dfce;
+  --radius: 18px;
+  --sans: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--coral); text-underline-offset: 2px; }
+img { display: block; max-width: 100%; }
+.wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 22px; }
+
+/* ---------- top breadcrumb ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(79, 55, 179, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.topbar .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 54px;
+}
+.topbar a { color: rgba(255,255,255,.9); font-size: 14px; text-decoration: none; }
+.topbar a:hover { color: #fff; }
+.topbar .home { font-weight: 600; }
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 50% -10%, var(--purple-soft) 0%, var(--purple) 42%, var(--purple-deep) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 72px 0 88px;
+}
+/* faint 3x3 grid motif echoing the app icon */
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(70% 60% at 50% 30%, #000 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 30%, #000 0%, transparent 75%);
+  pointer-events: none;
+}
+.hero > .wrap { position: relative; z-index: 1; }
+.app-icon {
+  width: 116px; height: 116px;
+  border-radius: 26px;
+  box-shadow: 0 18px 40px -12px rgba(0,0,0,.45);
+  margin: 0 auto 22px;
+}
+.hero .eyebrow {
+  font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,.78); margin: 0 0 10px;
+}
+.hero h1 {
+  font-size: clamp(40px, 9vw, 64px);
+  margin: 0; letter-spacing: 0.04em; font-weight: 800;
+}
+.hero .tagline {
+  font-size: clamp(17px, 3.6vw, 21px);
+  font-weight: 600;
+  margin: 18px auto 0; max-width: 22em;
+}
+.hero .sub {
+  color: rgba(255,255,255,.82);
+  margin: 14px auto 0; max-width: 30em; font-size: 15.5px;
+}
+.cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+.btn {
+  display: inline-block; font-weight: 700; font-size: 15px;
+  padding: 13px 26px; border-radius: 999px; text-decoration: none;
+  transition: transform .18s, box-shadow .18s, background .18s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: var(--gold); color: #4a3a10;
+  box-shadow: 0 10px 24px -10px rgba(243,196,74,.8);
+}
+.btn-ghost {
+  background: rgba(255,255,255,.12); color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+}
+.btn-ghost:hover { background: rgba(255,255,255,.2); }
+.btn-appstore {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #000; color: #fff;
+  box-shadow: 0 10px 24px -10px rgba(0,0,0,.6);
+}
+.btn-appstore:hover { background: #1a1a1a; }
+.btn-appstore .apple { width: 17px; height: 17px; margin-top: -2px; }
+
+/* ---------- generic section ---------- */
+.section { padding: 72px 0; }
+.section.alt { background: var(--cream-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-title {
+  text-align: center; font-size: clamp(24px, 5vw, 30px);
+  margin: 0 0 12px; letter-spacing: 0.02em;
+}
+.section-lead {
+  text-align: center; color: var(--muted);
+  max-width: 30em; margin: 0 auto 44px;
+}
+
+/* ---------- about narrative ---------- */
+.about p { max-width: 34em; margin: 0 auto 16px; color: #54493a; }
+.about p:last-child { margin-bottom: 0; }
+
+/* ---------- feature cards ---------- */
+.features {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 8px;
+}
+.feature {
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  text-align: center;
+}
+.feature .ic {
+  width: 56px; height: 56px; border-radius: 16px;
+  display: grid; place-items: center;
+  margin: 0 auto 16px; font-size: 26px;
+}
+.feature h3 { margin: 0 0 8px; font-size: 18px; }
+.feature p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+/* ---------- screenshot gallery ---------- */
+.gallery {
+  display: flex; gap: 20px;
+  overflow-x: auto;
+  padding: 6px 22px 18px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.gallery::-webkit-scrollbar { height: 8px; }
+.gallery::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+.shot {
+  flex: 0 0 auto;
+  width: 246px;
+  scroll-snap-align: center;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px -18px rgba(79,55,179,.55);
+}
+.shot img { width: 100%; height: auto; }
+
+/* ---------- final CTA ---------- */
+.cta-band {
+  background: radial-gradient(120% 120% at 50% 0%, var(--purple-soft), var(--purple) 55%, var(--purple-deep));
+  color: #fff; text-align: center; padding: 64px 0;
+}
+.cta-band h2 { margin: 0 0 12px; font-size: clamp(22px, 5vw, 28px); }
+.cta-band p { color: rgba(255,255,255,.85); margin: 0 auto 26px; max-width: 26em; }
+.cta-band .mail { font-weight: 700; font-size: 17px; }
+.cta-band .mail a { color: var(--gold); }
+
+/* ---------- footer ---------- */
+.site-footer {
+  background: var(--purple-deep); color: rgba(255,255,255,.7);
+  padding: 28px 0; text-align: center; font-size: 13px;
+}
+.site-footer a { color: rgba(255,255,255,.85); }
+.site-footer .links { margin: 0 0 8px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .features { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; }
+  .section { padding: 56px 0; }
+}

@@ -10,7 +10,8 @@
 ├── assets/style.css                 # トップページのスタイル
 └── apps/
     └── specimen-box/
-        ├── index.html               # 化石箱 LP（簡易版・準備中）
+        ├── index.html               # 化石箱 LP（アプリのデザインに沿った本ページ）
+        ├── assets/                   # アプリアイコン・スクリーンショット・LP用CSS
         └── support/                  # 化石箱サポートサイト
             ├── index.html            #   サポート / FAQ（App Store サポートURL）
             ├── privacy.html          #   プライバシーポリシー
