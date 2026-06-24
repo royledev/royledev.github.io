@@ -88,19 +88,38 @@ a { color: var(--accent-deep); text-decoration: none; }
   color: var(--accent); font-weight: 700; margin: 0 0 12px;
 }
 .hero h1 {
-  font-size: clamp(36px, 7.5vw, 56px);
-  margin: 0; font-weight: 900; letter-spacing: .03em;
-  color: var(--ink);
+  font-size: clamp(44px, 9vw, 72px);
+  margin: 0; font-weight: 900; letter-spacing: .04em;
+  color: var(--ink); line-height: 1.05;
 }
+.hero h1 .dot { color: var(--accent); }
 .role {
-  font-size: clamp(15px, 3vw, 17px); font-weight: 700;
-  color: var(--accent-deep); margin: 14px 0 0; letter-spacing: .04em;
+  font-size: clamp(13px, 2.6vw, 15px); font-weight: 700;
+  color: var(--muted); margin: 12px 0 0; letter-spacing: .14em;
 }
 .role::before, .role::after { content: "—"; color: var(--line); margin: 0 12px; font-weight: 400; }
+
+/* designed lead statement */
+.hero .lead {
+  font-size: clamp(23px, 5vw, 34px);
+  font-weight: 700; line-height: 1.5; letter-spacing: .02em;
+  color: var(--ink); margin: 34px auto 0; max-width: 18em;
+}
+.hero .lead em {
+  font-style: normal; position: relative; white-space: nowrap;
+  padding: 0 .06em;
+}
+.hero .lead em::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: .08em;
+  height: .42em; background: rgba(91,137,172,.24);
+  border-radius: 3px; z-index: -1;
+}
 .hero .summary {
-  max-width: 30em; margin: 22px auto 0;
+  max-width: 32em; margin: 24px auto 0;
   color: var(--sub); font-size: 15.5px;
 }
+.hero .summary .kw { font-weight: 700; color: var(--accent-deep); letter-spacing: .02em; }
+.hero .summary strong { font-weight: 700; color: var(--ink); }
 
 .stack { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin-top: 30px; }
 .chip {
@@ -136,10 +155,18 @@ a { color: var(--accent-deep); text-decoration: none; }
 .section.warm { background: var(--bg-warm); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section-head { text-align: center; margin-bottom: 46px; }
 .section-head .kicker {
-  display: inline-block; font-weight: 700; font-size: 12px; letter-spacing: .2em;
-  color: var(--accent); margin-bottom: 8px; text-transform: uppercase;
+  display: inline-block; font-weight: 700; font-size: 11px; letter-spacing: .32em;
+  color: var(--accent); margin-bottom: 10px; text-transform: uppercase;
+  padding-left: .32em;
 }
-.section-head h2 { font-size: clamp(23px, 4.5vw, 29px); margin: 0; font-weight: 700; letter-spacing: .04em; }
+.section-head h2 {
+  font-size: clamp(24px, 4.6vw, 31px); margin: 0; font-weight: 900; letter-spacing: .05em;
+  position: relative; display: inline-block; padding-bottom: 16px;
+}
+.section-head h2::after {
+  content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 34px; height: 3px; border-radius: 3px; background: var(--accent);
+}
 
 /* ---------- apps ---------- */
 .apps {
@@ -180,8 +207,16 @@ a { color: var(--accent-deep); text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: var(--radius); padding: 24px 26px;
 }
-.fact h3 { margin: 0 0 10px; font-size: 15.5px; font-weight: 700; letter-spacing: .03em; color: var(--accent-deep); }
-.fact h3 .e { margin-right: 8px; font-size: 14px; opacity: .85; }
+.fact h3 {
+  margin: 0 0 12px; font-size: 16px; font-weight: 700; letter-spacing: .03em; color: var(--ink);
+  display: flex; align-items: baseline; gap: 10px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--line);
+}
+.fact h3 .n {
+  font-size: 13px; font-weight: 900; letter-spacing: .04em;
+  color: var(--accent); font-feature-settings: "tnum";
+}
+.fact b { color: var(--ink); font-weight: 700; }
 .fact p, .fact ul { margin: 0; color: var(--sub); font-size: 14.5px; }
 .fact ul { padding-left: 1.2em; }
 .fact li { margin-bottom: 3px; }
