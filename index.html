@@ -4,154 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royle — ソフトウェアエンジニア</title>
-  <meta name="description" content="Royle のポートフォリオ。Kotlin / PHP / TypeScript を中心としたソフトウェアエンジニア。制作したアプリを紹介しています。">
-  <link rel="stylesheet" href="./assets/style.css?v=5">
+  <meta name="description" content="Royle のポートフォリオ。Kotlin / PHP / TypeScript を中心に、アプリケーションの基盤づくりを手がけるソフトウェアエンジニア。">
+  <link rel="stylesheet" href="./assets/style.css?v=6">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🐧</text></svg>">
 
-  <!-- 再利用するペンギンマスコット(SVGシンボル) -->
+  <!-- penguin mascot (reused) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="peng" viewBox="0 0 120 120">
-      <ellipse cx="18" cy="74" rx="12" ry="22" fill="#fff" stroke="#3a3a3a" stroke-width="3" transform="rotate(-18 18 74)"/>
-      <ellipse cx="102" cy="74" rx="12" ry="22" fill="#fff" stroke="#3a3a3a" stroke-width="3" transform="rotate(18 102 74)"/>
-      <ellipse cx="60" cy="66" rx="46" ry="45" fill="#fff" stroke="#3a3a3a" stroke-width="3"/>
-      <circle cx="35" cy="66" r="9" fill="#ffb3c1"/>
-      <circle cx="85" cy="66" r="9" fill="#ffb3c1"/>
+      <ellipse cx="18" cy="74" rx="12" ry="22" fill="#fff" stroke="#2b2b2b" stroke-width="3" transform="rotate(-18 18 74)"/>
+      <ellipse cx="102" cy="74" rx="12" ry="22" fill="#fff" stroke="#2b2b2b" stroke-width="3" transform="rotate(18 102 74)"/>
+      <ellipse cx="60" cy="66" rx="46" ry="45" fill="#fff" stroke="#2b2b2b" stroke-width="3"/>
+      <circle cx="35" cy="66" r="9" fill="#f3b2c0"/>
+      <circle cx="85" cy="66" r="9" fill="#f3b2c0"/>
       <circle cx="48" cy="52" r="6.5" fill="#222"/>
       <circle cx="72" cy="52" r="6.5" fill="#222"/>
       <circle cx="50.5" cy="49.5" r="2.2" fill="#fff"/>
       <circle cx="74.5" cy="49.5" r="2.2" fill="#fff"/>
-      <path d="M60 55 l9 8 -9 5 -9 -5 z" fill="#ffcf4d" stroke="#e0a92e" stroke-width="1.6"/>
+      <path d="M60 55 l9 8 -9 5 -9 -5 z" fill="#e9b133" stroke="#c9912a" stroke-width="1.6"/>
     </symbol>
   </svg>
 </head>
 <body>
-  <nav class="topbar">
+  <nav class="nav">
     <div class="wrap">
-      <span class="brand">Royle<span class="dot">.</span></span>
-      <div class="topnav">
-        <a href="#apps">Works</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <span class="brand">royle<b>.</b>dev</span>
+      <div class="links">
+        <a href="#works">works</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
       </div>
     </div>
   </nav>
 
   <header class="hero">
-    <span class="glow g1"></span>
-    <span class="glow g2"></span>
     <div class="wrap">
-      <div class="avatar">
+      <div class="avatar anim d1">
         <img src="./assets/avatar.png" alt="Royle のアイコン"
              onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
         <svg class="penguin" style="display:none"><use href="#peng"/></svg>
       </div>
-      <p class="eyebrow">Software&nbsp;Engineer</p>
-      <h1>Royle<span class="dot">.</span></h1>
-      <p class="role">ソフトウェアエンジニア</p>
+      <p class="eyebrow anim d1">Software Engineer</p>
+      <h1 class="anim d2">Royle<span class="pt">.</span></h1>
+      <p class="role anim d3">アプリケーションの“裏側”をつくる、ソフトウェアエンジニア。</p>
 
-      <p class="lead">
-        コードで、<em>つかう人の毎日</em>を<br>
-        すこし良くする。
-      </p>
-      <p class="summary">
-        <span class="kw">Kotlin</span> / <span class="kw">PHP</span> / <span class="kw">TypeScript</span>
-        を中心に、アプリケーションの基盤づくりを手がけるソフトウェアエンジニア。
-        個人開発では <span class="kw">Flutter</span> で iOS アプリも。
-        <strong>設計から運用まで</strong>、丁寧につくることを大切にしています。
-      </p>
+      <pre class="decl anim d4" aria-label="Royle のプロフィール（Kotlin 風の宣言）"><code><span class="k">val</span> <span class="v">royle</span> <span class="o">=</span> <span class="t">Engineer</span> <span class="o">{</span>
+    <span class="key">stack</span> <span class="o">=</span> <span class="t">listOf</span><span class="o">(</span><span class="s">"Kotlin"</span><span class="o">,</span> <span class="s">"PHP"</span><span class="o">,</span> <span class="s">"TypeScript"</span><span class="o">)</span>
+    <span class="key">alsoBuilds</span> <span class="o">=</span> <span class="s">"Flutter · iOS アプリ"</span>
+    <span class="key">approach</span> <span class="o">=</span> <span class="s">"設計から運用まで、ていねいに"</span>
+<span class="o">}</span></code></pre>
 
-      <div class="stack">
-        <span class="chip"><span class="dot" style="background:#7f52ff"></span>Kotlin</span>
-        <span class="chip"><span class="dot" style="background:#777bb3"></span>PHP</span>
-        <span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span>
-        <span class="chip"><span class="dot" style="background:#02569b"></span>Flutter / Dart</span>
-        <span class="chip"><span class="dot" style="background:#f38020"></span>Cloudflare Workers</span>
-        <span class="chip"><span class="dot" style="background:#5b89ac"></span>SQL / DB 設計</span>
-      </div>
-
-      <div class="cta">
-        <a class="btn btn-primary" href="#apps">制作したアプリを見る</a>
-        <a class="btn btn-soft" href="#contact">お問い合わせ</a>
+      <div class="cta anim d5">
+        <a class="btn btn-fill" href="#works">制作したアプリ →</a>
+        <a class="btn btn-line" href="#contact">お問い合わせ</a>
       </div>
     </div>
   </header>
 
-  <section class="section" id="apps">
+  <section class="sec" id="works">
     <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Works</span>
-        <h2>制作したアプリ</h2>
-      </div>
-      <div class="apps">
-        <a class="app-card" href="./apps/specimen-box/index.html">
-          <div class="row">
-            <img class="app-icon" src="./apps/specimen-box/assets/icon.png" alt="化石箱 アプリアイコン" loading="lazy">
-            <div>
-              <h3>化石箱</h3>
-              <span class="chip-live">● 公開中</span>
-            </div>
+      <p class="sec-label" data-reveal>works</p>
+      <h2 class="sec-title" data-reveal>制作したアプリ</h2>
+      <a class="work" href="./apps/specimen-box/index.html" data-reveal>
+        <div class="top">
+          <img class="icon" src="./apps/specimen-box/assets/icon.png" alt="化石箱 アプリアイコン" loading="lazy">
+          <div>
+            <h3>化石箱</h3>
+            <span class="state"><span class="blip">●</span> 公開中 · App Store</span>
           </div>
-          <p>1日3回届く「ちょっと答えたくなる問い」に答えると、意味不明な化石がひとつ手に入る収集アプリ。</p>
-          <div class="app-meta">
-            <span class="tag">Flutter</span>
-            <span class="tag">iOS</span>
-            <span class="tag">Cloudflare Workers</span>
+        </div>
+        <p>1日3回届く「ちょっと答えたくなる問い」に答えると、意味不明な化石がひとつ手に入る収集アプリ。</p>
+        <p class="meta">Flutter · iOS · Cloudflare Workers</p>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="wrap">
+      <p class="sec-label" data-reveal>about</p>
+      <h2 class="sec-title" data-reveal>royle = Engineer { … }</h2>
+      <div class="fields">
+        <div class="field" data-reveal>
+          <div class="fkey">role</div>
+          <p class="fval">ソフトウェアエンジニア。API 設計・データベース・サーバー基盤など、アプリケーションを支える裏側を中心につくっています。</p>
+        </div>
+        <div class="field" data-reveal>
+          <div class="fkey">languages</div>
+          <div class="fval">
+            <ul>
+              <li><b>Kotlin</b> <span class="sub">— JVM バックエンド / Android</span></li>
+              <li><b>PHP</b> <span class="sub">— Web アプリケーション</span></li>
+              <li><b>TypeScript</b> <span class="sub">— API / フロント / エッジ</span></li>
+            </ul>
           </div>
-          <span class="go">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section warm" id="about">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">About</span>
-        <h2>自己紹介</h2>
-      </div>
-      <div class="about-grid">
-        <div class="fact">
-          <h3><span class="n">01</span>仕事</h3>
-          <p>ソフトウェアエンジニア。API 設計やデータベース、サーバー基盤など、アプリケーションを支える裏側を中心につくっています。</p>
         </div>
-        <div class="fact">
-          <h3><span class="n">02</span>使用言語</h3>
-          <ul>
-            <li><b>Kotlin</b> — JVM バックエンド / Android</li>
-            <li><b>PHP</b> — Web アプリケーション</li>
-            <li><b>TypeScript</b> — API / フロント / エッジ</li>
-          </ul>
+        <div class="field" data-reveal>
+          <div class="fkey">sideProjects</div>
+          <p class="fval">Flutter / Dart で iOS アプリを開発し、Cloudflare Workers でサーバーサイドも構築。設計から運用まで一貫して手がけます。</p>
         </div>
-        <div class="fact">
-          <h3><span class="n">03</span>個人開発</h3>
-          <p>Flutter / Dart で iOS アプリを開発し、Cloudflare Workers でサーバーサイドも構築。設計から運用まで一貫して手がけます。</p>
-        </div>
-        <div class="fact">
-          <h3><span class="n">04</span>大切にしていること</h3>
-          <p>つくって終わりにせず、運用・保守まで見すえた設計を心がけています。小さく確実に動くものを積み上げる開発が好きです。</p>
+        <div class="field" data-reveal>
+          <div class="fkey">approach<span class="dot">.</span></div>
+          <p class="fval">つくって終わりにせず、運用・保守まで見すえた設計を。小さく確実に動くものを積み上げる開発が好きです。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section class="close" id="contact">
     <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Contact</span>
-        <h2>お問い合わせ</h2>
+      <div class="inner">
+        <svg class="penguin" data-reveal><use href="#peng"/></svg>
+        <p class="sec-label" data-reveal>contact</p>
+        <h2 data-reveal>つくりたいもの、ありますか。</h2>
+        <p data-reveal>お仕事のご相談・アプリへのお問い合わせは、お気軽にご連絡ください。</p>
+        <a class="mail" href="mailto:royle.dev6131@gmail.com" data-reveal>royle.dev6131@gmail.com</a>
       </div>
-      <div class="contact-card">
-        <svg class="penguin"><use href="#peng"/></svg>
-        <p>お仕事のご相談・アプリへのお問い合わせは、お気軽にご連絡ください。</p>
-        <a class="mail" href="mailto:royle.dev6131@gmail.com">royle.dev6131@gmail.com</a>
-      </div>
+    </div>
+    <div class="foot">
+      <div class="wrap"><p>© 2026 Royle — built with Kotlin, curiosity &amp; 🐧</p></div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© 2026 Royle</p>
-    </div>
-  </footer>
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('[data-reveal]');
+      if (reduce || !('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.14 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
